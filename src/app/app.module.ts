@@ -8,9 +8,10 @@ import { EditModalComponent } from './edit-modal/edit-modal.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { BioCardComponent } from './bio-card/bio-card.component';
 
 @NgModule({
-  declarations: [AppComponent, EditModalComponent],
+  declarations: [AppComponent, EditModalComponent, BioCardComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
