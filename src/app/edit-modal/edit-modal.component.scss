@@ -1,7 +1,7 @@
 @import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 .mat-card {
-  width: 250px;
+  max-width: 250px;
   padding: 35px;
   mat-card-header {
     margin-bottom: 20px;
