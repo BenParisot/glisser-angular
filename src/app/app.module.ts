@@ -9,9 +9,10 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { BioCardComponent } from './bio-card/bio-card.component';
+import { BioEditComponent } from './bio-edit/bio-edit.component';
 
 @NgModule({
-  declarations: [AppComponent, EditModalComponent, BioCardComponent],
+  declarations: [AppComponent, EditModalComponent, BioCardComponent, BioEditComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
