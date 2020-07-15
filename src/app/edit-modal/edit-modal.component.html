@@ -1,20 +1,26 @@
-<mat-card class="mat-card">
-  <mat-card-header>
-    <mat-card-title>Edit your details:</mat-card-title>
-  </mat-card-header>
-  <mat-card-content class="mat-card-content">
-    <mat-form-field appearance="fill">
-      <mat-label>First Name</mat-label>
-      <input matInput placeholder="John" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Last Name</mat-label>
-      <input matInput placeholder="Doe" />
-    </mat-form-field>
-    <mat-form-field appearance="fill">
-      <mat-label>Subtitle</mat-label>
-      <input matInput placeholder="Definitely NOT Superman" />
-    </mat-form-field>
-    <button mat-flat-button color="primary">OK</button>
-  </mat-card-content>
-</mat-card>
+<div [@nameModal] *ngIf="visible" class="name-modal">
+  <mat-card class="mat-card">
+    <mat-card-header>
+      <mat-card-title>Edit your details:</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="mat-card-content">
+      <mat-form-field appearance="fill">
+        <mat-label>First Name</mat-label>
+        <input matInput [(ngModel)]="character.firstName" placeholder="John" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Last Name</mat-label>
+        <input matInput [(ngModel)]="character.lastName" placeholder="Doe" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Subtitle</mat-label>
+        <input
+          matInput
+          [(ngModel)]="character.subTitle"
+          placeholder="Definitely NOT Superman"
+        />
+      </mat-form-field>
+      <button mat-flat-button color="primary">OK</button>
+    </mat-card-content>
+  </mat-card>
+</div>

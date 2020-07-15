@@ -1,5 +1,20 @@
 <body class="mat-app-background">
-  <app-bio-card></app-bio-card>
-  <app-edit-modal></app-edit-modal>
+  <div class="bio-main">
+    <div class="bio-header">
+      <div class="avatar"></div>
+      <div (click)="showNameModal = !showNameModal">
+        <h1>{{character.firstName}} {{character.lastName}}</h1>
+        <h3>{{character.subTitle}}</h3>
+      </div>
+    </div>
+    <div class="bio-content">
+      <h2>My bio</h2>
+      <p>
+        {{character.bio}}
+      </p>
+    </div>
+  </div>
+
+  <app-edit-modal [(visible)]="showNameModal"></app-edit-modal>
   <app-bio-edit></app-bio-edit>
 </body>

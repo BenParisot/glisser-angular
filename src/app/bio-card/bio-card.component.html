@@ -1,7 +1,7 @@
 <div class="bio-main">
   <div class="bio-header">
     <div class="avatar"></div>
-    <div>
+    <div (click)="showNameModal = !showNameModal">
       <h1>{{character.firstName}} {{character.lastName}}</h1>
       <h3>{{character.subTitle}}</h3>
     </div>
