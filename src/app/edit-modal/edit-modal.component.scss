@@ -1,7 +1,17 @@
-@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
-
+@import "@angular/material/prebuilt-themes/deeppurple-amber.css";
 
 .mat-card {
-  width: 60vw;
-  height: 40vh;
+  width: 250px;
+  padding: 35px;
+  mat-card-header {
+    margin-bottom: 20px;
+  }
+  mat-card-content {
+    display: flex;
+    flex-direction: column;
+    button {
+      width: 120px;
+      align-self: flex-end;
+    }
+  }
 }
