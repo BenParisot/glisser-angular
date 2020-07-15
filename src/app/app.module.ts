@@ -10,9 +10,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { BioCardComponent } from './bio-card/bio-card.component';
 import { BioEditComponent } from './bio-edit/bio-edit.component';
+import { CharacterComponent } from './character/character.component';
 
 @NgModule({
-  declarations: [AppComponent, EditModalComponent, BioCardComponent, BioEditComponent],
+  declarations: [AppComponent, EditModalComponent, BioCardComponent, BioEditComponent, CharacterComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
