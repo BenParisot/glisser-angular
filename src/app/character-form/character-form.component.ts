@@ -24,13 +24,11 @@ export class CharacterFormComponent {
   }
 
   onSubmit() {
-    BioCardComponent.character = { ...this.model }
+    BioCardComponent.character.firstName = this.model.firstName;
+    BioCardComponent.character.lastName = this.model.lastName;
+    BioCardComponent.character.subtitle = this.model.subtitle;
     CharacterFormComponent.hidden = !CharacterFormComponent.hidden;
   }
-
-  get diagnostic() {
-    return JSON.stringify(this.model);
-  }
-
+  
   CharacterFormComponent = CharacterFormComponent;
 }
