@@ -7,13 +7,13 @@
       <mat-card-title>Edit your bio:</mat-card-title>
     </mat-card-header>
     <mat-card-content class="mat-card-content">
-      <form (ngSubmit)="onSubmit()" #bioForm="ngForm">
+      <form (ngSubmit)="onSubmit()" #bioForm="ngForm" novalidate>
         <mat-form-field appearance="fill">
           <mat-label>Edit...</mat-label>
           <textarea
             matInput
             placeholder="John"
-            [(ngModel)]="model.bio"
+            [(ngModel)]="BioFormComponent.model.bio"
             matInput
             class="form-control"
             id="bio"

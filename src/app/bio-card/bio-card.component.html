@@ -2,14 +2,14 @@
   <div class="bio-header">
     <div class="avatar"></div>
     <div (click)="toggleCharacterForm()">
-      <h1>{{character.firstName}} {{character.lastName}}</h1>
-      <h3>{{character.subtitle}}</h3>
+      <h1>{{BioCardComponent.character.firstName}} {{BioCardComponent.character.lastName}}</h1>
+      <h3>{{BioCardComponent.character.subtitle}}</h3>
     </div>
   </div>
   <div class="bio-content" (click)="toggleBioForm()">
     <h2>My bio</h2>
     <p>
-      {{character.bio}}
+      {{BioCardComponent.character.bio}}
     </p>
   </div>
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Character } from '../character';
+import { BioCardComponent } from '../bio-card/bio-card.component';
 
 @Component({
   selector: 'app-bio-form',
@@ -7,7 +8,7 @@ import { Character } from '../character';
   styleUrls: ['./bio-form.component.scss']
 })
 export class BioFormComponent {
-  model = new Character(
+  public static model = new Character(
     0,
     'Clark',
     'Kent',
@@ -23,6 +24,9 @@ export class BioFormComponent {
   }
 
   onSubmit() {
+    console.log('model', BioFormComponent.model)
+    console.log('card model', BioCardComponent.character)
+    BioCardComponent.character.bio = BioFormComponent.model.bio;
     BioFormComponent.hidden = !BioFormComponent.hidden;
   }
 

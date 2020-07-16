@@ -8,7 +8,7 @@ import { BioFormComponent } from '../bio-form/bio-form.component';
   styleUrls: ['./bio-card.component.scss'],
 })
 export class BioCardComponent implements OnInit {
-  character: Character = {
+  public static character: Character = {
     id: 1,
     firstName: 'Clark',
     lastName: 'Kent',
@@ -23,7 +23,10 @@ export class BioCardComponent implements OnInit {
   toggleBioForm(): BioFormComponent[] {
     return BioFormComponent.toggleForm();
   }
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  BioCardComponent = BioCardComponent
 }
