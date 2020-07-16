@@ -11,9 +11,17 @@ import { MatButtonModule } from '@angular/material/button';
 import { BioCardComponent } from './bio-card/bio-card.component';
 import { BioEditComponent } from './bio-edit/bio-edit.component';
 import { CharacterComponent } from './character/character.component';
+import { CharacterFormComponent } from './character-form/character-form.component';
 
 @NgModule({
-  declarations: [AppComponent, EditModalComponent, BioCardComponent, BioEditComponent, CharacterComponent],
+  declarations: [
+    AppComponent,
+    EditModalComponent,
+    BioCardComponent,
+    BioEditComponent,
+    CharacterComponent,
+    CharacterFormComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

@@ -1,7 +1,9 @@
-export interface Character {
-  id: number;
-  firstName: string;
-  lastName: string;
-  subTitle: string;
-  bio: string;
+export class Character {
+  constructor(
+    public id: number,
+    public firstName: string,
+    public lastName: string,
+    public subtitle: string,
+    public bio: string
+  ) {}
 }
