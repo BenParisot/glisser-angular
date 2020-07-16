@@ -1,24 +1,23 @@
-<div [@nameModal] *ngIf="visible" class="name-modal">
+<div class="name-modal">
   <mat-card class="mat-card">
+    <div class="close-icon">
+      <img src="../../assets/close-black-18dp.svg" alt="close-icon" />
+    </div>
     <mat-card-header>
       <mat-card-title>Edit your details:</mat-card-title>
     </mat-card-header>
     <mat-card-content class="mat-card-content">
       <mat-form-field appearance="fill">
         <mat-label>First Name</mat-label>
-        <input matInput [(ngModel)]="character.firstName" placeholder="John" />
+        <input matInput placeholder="John" />
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Last Name</mat-label>
-        <input matInput [(ngModel)]="character.lastName" placeholder="Doe" />
+        <input matInput placeholder="Doe" />
       </mat-form-field>
       <mat-form-field appearance="fill">
         <mat-label>Subtitle</mat-label>
-        <input
-          matInput
-          [(ngModel)]="character.subTitle"
-          placeholder="Definitely NOT Superman"
-        />
+        <input matInput placeholder="Definitely NOT Superman" />
       </mat-form-field>
       <button mat-flat-button color="primary">OK</button>
     </mat-card-content>

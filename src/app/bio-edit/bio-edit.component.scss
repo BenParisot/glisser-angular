@@ -2,9 +2,14 @@
   position: fixed;
   top: 200px;
   left: 35%;
-  z-index: 100;
+  z-index: 500;
   width: 350px;
   padding: 35px;
+  .close-icon {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+  }
   mat-card-header {
     margin-bottom: 20px;
   }
