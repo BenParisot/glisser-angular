@@ -5,7 +5,7 @@ import { BioCardComponent } from '../bio-card/bio-card.component';
 @Component({
   selector: 'app-bio-form',
   templateUrl: './bio-form.component.html',
-  styleUrls: ['./bio-form.component.scss']
+  styleUrls: ['./bio-form.component.scss'],
 })
 export class BioFormComponent {
   public static model = new Character(
@@ -19,15 +19,16 @@ export class BioFormComponent {
   public static hidden: any = true;
 
   static toggleForm(): BioFormComponent[] {
+    BioCardComponent.toggelOverlay();
     this.hidden = !this.hidden;
     return;
   }
 
   onSubmit() {
     BioCardComponent.character.bio = BioFormComponent.model.bio;
+    BioCardComponent.toggelOverlay();
     BioFormComponent.hidden = !BioFormComponent.hidden;
   }
 
   BioFormComponent = BioFormComponent;
-
 }

@@ -10,6 +10,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { BioCardComponent } from './bio-card/bio-card.component';
 import { CharacterFormComponent } from './character-form/character-form.component';
 import { BioFormComponent } from './bio-form/bio-form.component';
+import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { BioFormComponent } from './bio-form/bio-form.component';
     BioCardComponent,
     CharacterFormComponent,
     BioFormComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,

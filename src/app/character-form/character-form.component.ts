@@ -19,6 +19,7 @@ export class CharacterFormComponent {
   public static hidden: any = true;
 
   static toggleForm(): CharacterFormComponent[] {
+    BioCardComponent.toggelOverlay();
     this.hidden = !this.hidden;
     return;
   }
@@ -27,6 +28,7 @@ export class CharacterFormComponent {
     BioCardComponent.character.firstName = this.model.firstName;
     BioCardComponent.character.lastName = this.model.lastName;
     BioCardComponent.character.subtitle = this.model.subtitle;
+    BioCardComponent.toggelOverlay();
     CharacterFormComponent.hidden = !CharacterFormComponent.hidden;
   }
   

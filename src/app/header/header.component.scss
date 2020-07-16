@@ -1,0 +1,23 @@
+
+header {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 250, 142, 1) 0%,
+    rgba(115, 231, 255, 1) 100%
+  );
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding: 10px 25px;
+  img {
+    height: 80px;
+  }
+  p {
+    font-size: 18px;
+    font-style: italic;
+    font-weight: bold;
+    color: #4e4d56;
+  }
+}

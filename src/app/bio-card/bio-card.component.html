@@ -1,4 +1,4 @@
-<div class="bio-main">
+<div [ngClass]="BioCardComponent.overlay ? 'bio-main-overlay' : 'bio-main'">
   <div class="bio-header">
     <div class="avatar"></div>
     <div (click)="toggleCharacterForm()">
