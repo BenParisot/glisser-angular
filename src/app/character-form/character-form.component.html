@@ -1,5 +1,5 @@
 <div class="form-container" [hidden]="CharacterFormComponent.hidden">
-  <mat-card class="mat-card" >
+  <mat-card class="mat-card">
     <div (click)="CharacterFormComponent.toggleForm()" class="close-icon">
       <img src="../../assets/close-black-18dp.svg" alt="close-icon" />
     </div>
@@ -9,46 +9,44 @@
     <mat-card-content class="mat-card-content">
       <form (ngSubmit)="onSubmit()" #characterForm="ngForm">
         <mat-form-field appearance="fill">
-          <mat-label for="firstName">
-            First Name:
-            <input
-              matInput
-              type="text"
-              class="form-control"
-              id="firstName"
-              [(ngModel)]="model.firstName"
-              name="firstName"
-              #name="ngModel"
-            />
-          </mat-label>
+          <mat-label for="firstName">First Name:</mat-label>
+          <input
+            [(ngModel)]="model.firstName"
+            matInput
+            type="text"
+            class="form-control"
+            id="firstName"
+            name="firstName"
+            #name="ngModel"
+          />
         </mat-form-field>
         <mat-form-field>
           <mat-label for="lastName">
             Last Name:
-            <input
-              matInput
-              type="text"
-              class="form-control"
-              id="lastName"
-              [(ngModel)]="model.lastName"
-              name="lastName"
-              #name="ngModel"
-            />
           </mat-label>
+          <input
+            matInput
+            type="text"
+            class="form-control"
+            id="lastName"
+            [(ngModel)]="model.lastName"
+            name="lastName"
+            #name="ngModel"
+          />
         </mat-form-field>
         <mat-form-field>
           <mat-label for="subtitle">
             Subtitle:
-            <input
-              matInput
-              type="text"
-              class="form-control"
-              id="subtitle"
-              [(ngModel)]="model.subtitle"
-              name="subtitle"
-              #name="ngModel"
-            />
           </mat-label>
+          <input
+            matInput
+            type="text"
+            class="form-control"
+            id="subtitle"
+            [(ngModel)]="model.subtitle"
+            name="subtitle"
+            #name="ngModel"
+          />
         </mat-form-field>
         <button
           mat-flat-button
