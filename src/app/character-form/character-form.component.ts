@@ -15,7 +15,7 @@ export class CharacterFormComponent {
     "I'm a mild-mannered reporter working for the Daily Bugle. There is nothing interesting about me. Nope, nothing out of the ordinary. Just a regular, white collar type of guy. A bit on the scrawny side if I'm being honest, but I've been working out lately to put on a few pounds. When I'm not chasing down a scoop I like to curl up with a good book, take a leisurely stroll, and generally avoid any and all confrontation."
   );
 
-  public static hidden: any = false;
+  public static hidden: any = true;
   // hidden = false;
 
   static toggleForm(): CharacterFormComponent[] {
@@ -27,7 +27,7 @@ export class CharacterFormComponent {
   onSubmit() {
     CharacterFormComponent.hidden = !CharacterFormComponent.hidden;
     console.log('submit successful');
-    // console.log('hidden in submit', this.hidden);
+    console.log('hidden in submit', CharacterFormComponent.hidden);
   }
 
   get diagnostic() {
