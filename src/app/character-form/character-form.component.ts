@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Character } from '../character';
+import { BioCardComponent } from '../bio-card/bio-card.component';
 
 @Component({
   selector: 'app-character-form',
@@ -23,6 +24,7 @@ export class CharacterFormComponent {
   }
 
   onSubmit() {
+    BioCardComponent.character = { ...this.model }
     CharacterFormComponent.hidden = !CharacterFormComponent.hidden;
   }
 

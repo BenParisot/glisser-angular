@@ -24,8 +24,6 @@ export class BioFormComponent {
   }
 
   onSubmit() {
-    console.log('model', BioFormComponent.model)
-    console.log('card model', BioCardComponent.character)
     BioCardComponent.character.bio = BioFormComponent.model.bio;
     BioFormComponent.hidden = !BioFormComponent.hidden;
   }
