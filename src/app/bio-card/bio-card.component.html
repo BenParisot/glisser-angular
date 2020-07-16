@@ -1,12 +1,12 @@
 <div class="bio-main">
   <div class="bio-header">
     <div class="avatar"></div>
-    <div (click)="toggleForm()">
+    <div (click)="toggleCharacterForm()">
       <h1>{{character.firstName}} {{character.lastName}}</h1>
       <h3>{{character.subtitle}}</h3>
     </div>
   </div>
-  <div class="bio-content">
+  <div class="bio-content" (click)="toggleBioForm()">
     <h2>My bio</h2>
     <p>
       {{character.bio}}

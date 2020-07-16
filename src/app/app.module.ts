@@ -12,6 +12,7 @@ import { BioCardComponent } from './bio-card/bio-card.component';
 import { BioEditComponent } from './bio-edit/bio-edit.component';
 import { CharacterComponent } from './character/character.component';
 import { CharacterFormComponent } from './character-form/character-form.component';
+import { BioFormComponent } from './bio-form/bio-form.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CharacterFormComponent } from './character-form/character-form.componen
     BioEditComponent,
     CharacterComponent,
     CharacterFormComponent,
+    BioFormComponent,
   ],
   imports: [
     BrowserModule,

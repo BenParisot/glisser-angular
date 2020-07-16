@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { Character } from '../character';
 
 @Component({
-  selector: 'app-character-form',
-  templateUrl: './character-form.component.html',
-  styleUrls: ['./character-form.component.scss'],
+  selector: 'app-bio-form',
+  templateUrl: './bio-form.component.html',
+  styleUrls: ['./bio-form.component.scss']
 })
-export class CharacterFormComponent {
+export class BioFormComponent {
   model = new Character(
     0,
     'Clark',
@@ -17,18 +17,15 @@ export class CharacterFormComponent {
 
   public static hidden: any = true;
 
-  static toggleForm(): CharacterFormComponent[] {
+  static toggleForm(): BioFormComponent[] {
     this.hidden = !this.hidden;
     return;
   }
 
   onSubmit() {
-    CharacterFormComponent.hidden = !CharacterFormComponent.hidden;
+    BioFormComponent.hidden = !BioFormComponent.hidden;
   }
 
-  get diagnostic() {
-    return JSON.stringify(this.model);
-  }
+  BioFormComponent = BioFormComponent;
 
-  CharacterFormComponent = CharacterFormComponent;
 }
