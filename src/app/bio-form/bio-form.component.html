@@ -4,56 +4,30 @@
       <img src="../../assets/close-black-18dp.svg" alt="close-icon" />
     </div>
     <mat-card-header>
-      <mat-card-title>Edit your details:</mat-card-title>
+      <mat-card-title>Edit your bio:</mat-card-title>
     </mat-card-header>
     <mat-card-content class="mat-card-content">
-      <form (ngSubmit)="onSubmit()" #characterForm="ngForm">
+      <form (ngSubmit)="onSubmit()" #bioForm="ngForm">
         <mat-form-field appearance="fill">
-          <mat-label for="firstName">First Name:</mat-label>
-          <input
-            [(ngModel)]="model.firstName"
+          <mat-label>Edit...</mat-label>
+          <textarea
             matInput
-            type="text"
-            class="form-control"
-            id="firstName"
-            name="firstName"
-            #name="ngModel"
-          />
-        </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label for="lastName">
-            Last Name:
-          </mat-label>
-          <input
+            placeholder="John"
+            [(ngModel)]="model.bio"
             matInput
-            type="text"
             class="form-control"
-            id="lastName"
-            [(ngModel)]="model.lastName"
-            name="lastName"
+            id="bio"
+            name="bio"
             #name="ngModel"
-          />
+          ></textarea>
         </mat-form-field>
-        <mat-form-field appearance="fill">
-          <mat-label for="subtitle">
-            Subtitle:
-          </mat-label>
-          <input
-            matInput
-            type="text"
-            class="form-control"
-            id="subtitle"
-            [(ngModel)]="model.subtitle"
-            name="subtitle"
-            #name="ngModel"
-          />
-        </mat-form-field>
+
         <button
           mat-flat-button
           color="primary"
           type="submit"
           class="submit-btn"
-          [disabled]="!characterForm.form.valid"
+          [disabled]="!bioForm.form.valid"
         >
           Submit
         </button>
