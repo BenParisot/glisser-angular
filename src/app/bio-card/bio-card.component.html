@@ -1,4 +1,5 @@
-<div [ngClass]="BioCardComponent.overlay ? 'bio-main-overlay' : 'bio-main'">
+<!-- <div [ngClass]="BioCardComponent.overlay ? 'bio-main-overlay' : 'bio-main'"> -->
+<div [ngClass]="hiddenCharacterForm && hiddenBioForm ? 'bio-main' : 'bio-main-overlay'">
   <div class="bio-header">
     <div class="avatar"></div>
     <div (click)="toggleCharacterForm()">
@@ -6,10 +7,12 @@
       <h3>{{BioCardComponent.character.subtitle}}</h3>
     </div>
   </div>
-  <div class="bio-content" (click)="toggleBioForm()">
+  <div (click)="toggleBioForm()">
     <h2>My bio</h2>
     <p>
       {{BioCardComponent.character.bio}}
     </p>
   </div>
 </div>
+<app-character-form [hidden]="hiddenCharacterForm"></app-character-form>
+<app-bio-form [hidden]="hiddenBioForm"></app-bio-form>

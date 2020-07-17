@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Character } from '../character';
-import { BioCardComponent } from '../bio-card/bio-card.component';
-
+import { SaveEditsService } from '../save-edits.service';
 @Component({
   selector: 'app-bio-form',
   templateUrl: './bio-form.component.html',
   styleUrls: ['./bio-form.component.scss'],
+  providers: [SaveEditsService]
 })
 export class BioFormComponent {
   public static model = new Character(
@@ -18,15 +18,14 @@ export class BioFormComponent {
 
   public static hidden: any = true;
 
-  static toggleForm(): BioFormComponent[] {
-    BioCardComponent.toggelOverlay();
-    this.hidden = !this.hidden;
-    return;
+  constructor(private saveEdits: SaveEditsService) {}
+
+  closeForm() {
+    BioFormComponent.hidden = !BioFormComponent.hidden;
   }
 
   onSubmit() {
-    BioCardComponent.character.bio = BioFormComponent.model.bio;
-    BioCardComponent.toggelOverlay();
+    this.saveEdits.saveBio(BioFormComponent.model.bio)
     BioFormComponent.hidden = !BioFormComponent.hidden;
   }
 
