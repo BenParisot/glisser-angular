@@ -2,10 +2,9 @@ import { Injectable } from '@angular/core';
 import { BioCardComponent } from './bio-card/bio-card.component';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SaveEditsService {
-
   saveBio(newBio) {
     BioCardComponent.character.bio = newBio;
   }
@@ -15,6 +14,4 @@ export class SaveEditsService {
     BioCardComponent.character.lastName = newDetails.lastName;
     BioCardComponent.character.subtitle = newDetails.subtitle;
   }
-
-  constructor() { }
 }

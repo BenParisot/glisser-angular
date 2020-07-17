@@ -22,7 +22,6 @@ export class CharacterFormComponent {
     this.bioCard.hiddenCharacterForm = !this.bioCard.hiddenCharacterForm;
   }
 
-
   onSubmit() {
     this.saveEdits.saveCharacter(this.model);
     this.bioCard.hiddenCharacterForm = !this.bioCard.hiddenCharacterForm;

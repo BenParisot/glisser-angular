@@ -12,7 +12,6 @@ import { CharacterFormComponent } from './character-form/character-form.componen
 import { BioFormComponent } from './bio-form/bio-form.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { ToggleService } from './toggle.service';
 import { SaveEditsService } from './save-edits.service';
 
 @NgModule({
@@ -33,7 +32,7 @@ import { SaveEditsService } from './save-edits.service';
     MatButtonModule,
     FormsModule,
   ],
-  providers: [ToggleService, SaveEditsService],
+  providers: [SaveEditsService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
