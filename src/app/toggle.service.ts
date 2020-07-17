@@ -14,6 +14,6 @@ export class ToggleService {
   // }
 
   toggleBioForm() {
-    BioFormComponent.hidden = !BioFormComponent.hidden;
+    // BioFormComponent.hidden = !BioFormComponent.hidden;
   }
 }
